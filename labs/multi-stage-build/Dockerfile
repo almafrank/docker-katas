@@ -9,5 +9,5 @@ ENTRYPOINT ./goapp
 FROM alpine
 WORKDIR /app
 COPY --from=builder /app/goapp /app/
-ENTRYPOINT ./goapp
+ENTRYPOINT ["./goapp"]
 

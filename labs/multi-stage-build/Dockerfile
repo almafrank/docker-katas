@@ -9,5 +9,5 @@ ENTRYPOINT ./goapp
 FROM scratch
 WORKDIR /app
 COPY --from=builder /app/goapp /app/
-CMD ["app/goapp"]
+CMD ["/app/goapp"]
 

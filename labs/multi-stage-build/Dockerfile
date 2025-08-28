@@ -8,6 +8,6 @@ ENTRYPOINT ./goapp
 # final stage
 FROM scratch
 WORKDIR /app
-COPY --from=builder /app/goapp /app/
+COPY --from=builder /app/goapp/ app/
 CMD ["/app/goapp"]
 

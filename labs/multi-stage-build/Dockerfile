@@ -6,8 +6,8 @@ RUN cd /app && go build -o goapp
 ENTRYPOINT ./goapp
 
 # final stage
-FROM alpine
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/goapp /app/
-ENTRYPOINT ["./goapp"]
+CMD ["app/goapp"]
 
